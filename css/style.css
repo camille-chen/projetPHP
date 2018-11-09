@@ -3,8 +3,8 @@ h1 {
   margin: 40px auto;
 }
 
-h2{
-  padding-bottom: 50px;
+h2 {
+  text-align: center;
 }
 
 form {
@@ -33,4 +33,26 @@ img {
   border: solid 2px grey;
   margin: 100px 454px;
   padding: 80px;
+}
+
+.profil {
+  text-align: center;
+}
+
+#button_add {
+  width: 200px;
+  float: right;
+}
+
+.soustitre {
+  font-weight: bold;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+#list {
+  margin-top: 20px;
 }

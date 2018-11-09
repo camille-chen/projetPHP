@@ -11,10 +11,10 @@ if(isset($_POST['connexion'])) //Si cette variable existe, on valide la conditio
 
     if(!empty($mailconnect) && !empty($mdpconnect)) //si les champs mail et mdp ne sont pas vides...
     {
-        //vérifie que le mail et mdp correspondent bien au champ
+        
         $requser = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?"); 
         $requser->execute(array($mailconnect,$mdpconnect));
-        $userexist = $requser->rowCount();
+        $userexist = $requser->rowCount();// vérifie qu'il existe un résultat ou pas
         if($userexist == 1) //si il existe un résultat correspondant au champ, il est égal à 1
         {
             $userinfo = $requser->fetch(); // récupérer les informations

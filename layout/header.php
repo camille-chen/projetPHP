@@ -1,9 +1,11 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <?php require("head.php"); ?>
 </head>
 <body>
+
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Nantes Event</a>
@@ -16,10 +18,13 @@
         <a class="nav-link" href="index.php">Accueil<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="profil.php">Profil</a>
+        <a class="nav-link" href="profil.php?id=<?php echo $_SESSION["id"] ?>">Profil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="php/logout.php">Déconnecter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="debuger.php" data-toggle="collapse" role="button">Debuger</a>
       </li>
     </ul>
   </div>

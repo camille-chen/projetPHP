@@ -1,7 +1,7 @@
 <?php
     require("db.php");
-    session_start();
-    $id=$_SESSION['id'];
+    $id=$_GET['id'];
+    //requête permettant de séléctionner l'id de la ligne correspondant à l'id de session
 
     $sql = "SELECT first_name, last_name, username, email, date_created, age
             FROM users
